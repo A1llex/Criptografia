@@ -2,3 +2,4 @@
 
 ## colaboradores
 @A1llex 
+@AngelChristianPimentelNoriega
