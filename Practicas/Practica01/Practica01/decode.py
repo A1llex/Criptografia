@@ -1,13 +1,18 @@
 """
-2b 06 2b 9e fe
-2b,06,2b,9e,fe = 43 6 43 158 254
-                |-37|
----------------------------
-fd ec bd b9
-fd,ec,bd,b9 = 02 253   236     189     185
-               |-04| 
-                    |(-17)| +234
-                        |(-47)|
+FF D8 FF  51
+255 216 255   81
+
+   
+2b 06 2b  9e     fe
+43 06 43  158
+
+a =  06 - 158 / 216 -219   = -152 / -3 
+
+x 
+
+a = 37/39
+b = -2586/13
+
 """     
 
 """
@@ -74,14 +79,14 @@ def caesar_dec(cipher, key):
     #return plain.decode('utf-8',errors='replace')
     return plain
 
-
-filebytesA = bytearray(arch1.read(5))
+print("A")
+filebytesA = bytearray(arch1.read(12))
 print("A",filebytesA)
-# for byte in filebytesA:
-#     print( hex(byte)  )
+for byte in filebytesA:
+    print( hex(byte)  )
 
-filebytesB = bytearray(arch2.read())
-print("B",filebytesB)
+#filebytesB = bytearray(arch2.read())
+#print("B",filebytesB)
 # for byte in filebytesB:
 #     print(hex(byte))
 
@@ -89,17 +94,15 @@ print("B",filebytesB)
 #     decodeed = caesar_dec(filebytesB, i)
 #     print(f"Decode B key:{i} {decodeed.decode('utf-8',errors='ignore')}  en hex ={decodeed} ")
 #     archivo = open(f"archivos/file{i}", 'wb+')
-#     # for b in decodeed:
-#     #     archivo.write(b)
 #     archivo.write(decodeed)
 #     archivo.close()
 
-clave = 185
-decodeed = caesar_dec(filebytesB, clave)
-#print(f"Decode B key:{clave} {decodeed.decode('utf-8',errors='ignore')}  en hex ={decodeed} ")
-archivo = open(f"file{clave}", 'wb+')
-archivo.write(decodeed)
-archivo.close()
+# clave = 185
+# decodeed = caesar_dec(filebytesB, clave)
+# #print(f"Decode B key:{clave} {decodeed.decode('utf-8',errors='ignore')}  en hex ={decodeed} ")
+# archivo = open(f"file{clave}", 'wb+')
+# archivo.write(decodeed)
+# archivo.close()
 
 
 """
